@@ -1,0 +1,102 @@
+$couleur-saumon : salmon;
+
+
+body{
+    color:$couleur-saumon;
+}
+
+%sizeBox{
+    width:150px;
+    height:150px;
+    margin:10px;
+    background:blue
+}
+
+@mixin sizers {
+    width:150px;
+    height:150px;
+    margin:10px;
+    @content;
+}
+
+@mixin background($couleur){
+    background:$couleur
+
+}
+
+// @mixin lesmarges($valeurdelamarge){
+//     margin: {
+//         right:$valeurdelamarge;
+//         top:$valeurdelamarge
+//     }
+// }
+
+@mixin lesmarges($margeune, $margetoto){
+   margin-left:$margeune;
+   margin-top:100px;
+   margin-right:$margeune;
+   margin-bottom:$margetoto;
+}
+
+@mixin speciale($propriete, $valeur){
+    #{$propriete}:$valeur;
+}
+
+@mixin borderradius($valeur){
+    border-radius:$valeur;
+    -webkit-border-radius:$valeur;
+    -moz-border-radius:$valeur;
+    -ms-border-radius:$valeur;
+    -o-border-radius:$valeur;
+}
+
+@mixin aspectbox($propertie, $valeur){
+    #{$propertie}:$valeur;
+    @include borderradius(50%);
+    @if  $valeur != aqua {
+        @include borderradius(0)  
+    } 
+}
+
+
+.box{
+width:150px;
+height:150px;
+@include aspectbox(background, aqua);
+
+}
+
+@import 'aymeric'
+
+
+
+// Boucle FOR
+
+// @for $i from 1 through 10{
+//     .div#{$i}{
+//         width:50px*$i;
+//         height:100px;
+//         background:green;
+//         margin:10px;
+//         font-size : 16px+$i;
+//         color:white;
+//     }
+// }
+
+// Boucle WHILE
+
+// $i: 10;
+// @while $i > 0 {
+//     .div#{$i}{
+//     content : $i;
+//         width: 100px/$i;
+//         height: 100px/$i;
+//                 background:green;
+//                 margin:10px;
+//                 font-size : 16px+$i;
+//                 color:white; 
+//     }   
+//     $i: $i - 1;
+// }
+
+

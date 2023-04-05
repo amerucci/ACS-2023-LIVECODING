@@ -1,0 +1,25 @@
+body {
+  color: salmon;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: aqua;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+article h1 {
+  color: red;
+  font-size: 80px;
+}
+
+h1 {
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */

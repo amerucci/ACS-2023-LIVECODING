@@ -1,0 +1,19 @@
+header{
+    background:lightgrey;
+    height:100vh;
+    width:100%;
+}
+
+.box{
+    background:grey;
+    height:300px;
+}
+
+#loremipsum{
+    background:lightgrey;
+    height:200px;
+}
+
+footer{
+    background: black;
+}
